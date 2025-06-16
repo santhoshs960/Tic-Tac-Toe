@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-heading: Georgia, serif;
+    --font-body: "Times New Roman", Times, "Liberation Serif", serif;
+}
+  
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: var(--font-body);
+}
+
+header {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    text-align: center;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+    place-items: center;
+    line-height: 1.6;
+}
+
+input {
+    margin-left: 8px;
+    width: 200px;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(239, 239, 239);
+    padding: 5px;
+    outline: none;
+}
+
+select {
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(239, 239, 239);
+    padding: 5px 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    grid-column: 1 / -1;
+    margin: 1.2rem 0;
+    width: 85px;
+    height: 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C; 
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--font-heading);
+    margin: 10px 0 20px;
+}
+
+.player_score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: .7px;
+    font-size: 18px;
+}
+
+.board {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-self: center;
+    margin: 50px auto;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #e6f7ff;
+}
